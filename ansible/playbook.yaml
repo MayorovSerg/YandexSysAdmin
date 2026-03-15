@@ -12,3 +12,10 @@
     - role: webserver
   tags:
     - webserver 
+
+- name: Установка и настройка Load Balancer
+  hosts: loadbalancer
+  roles:
+    - role: load_balancer
+  tags:
+    - loadbalancer

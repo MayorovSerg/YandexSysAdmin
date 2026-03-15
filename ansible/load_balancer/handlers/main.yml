@@ -1,2 +1,9 @@
 ---
 # handlers file for load_balancer
+
+- name: Nginx Reload load balancer
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    enabled: yes
+  listen: "Nginx Reload load balancer"

@@ -1,2 +1,13 @@
 ---
 # tasks file for load_balancer
+
+- name: Установка Nginx 
+  apt:
+    name: "nginx"
+    state: present
+
+- name: Настройка Proxy сервера (балансировика)
+  ansible.builtin.template:
+    src: nginx_settings.j2
+    dest: /etc/nginx/sites-enabled/default
+  notify: "Nginx Reload load balancer"
