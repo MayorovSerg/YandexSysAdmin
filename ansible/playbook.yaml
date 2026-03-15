@@ -1,0 +1,7 @@
+--- 
+- name: Установка стандартных пакетов
+  hosts: all
+  roles:
+    - role: default_packages
+  tags:
+    - install_packages
