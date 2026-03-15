@@ -1,12 +1,14 @@
 ---
 linux:  # Группа хостов
   children:  # Обозначение, что будет подгруппа хостов
-    nginx:  # Имя подгруппы хостов
+    webserver:  # Имя подгруппы хостов
       hosts:  # Узлы группы
         web_server1:  # Имя машины
           ansible_host: 10.10.0.20
         web_server2:
           ansible_host: 10.10.0.30
+    loadbalancer:
+      hosts:
         load_balancer:
           ansible_host: 10.10.0.16
   vars:  # Переменные, доступные или используемые для всех подгрупп
